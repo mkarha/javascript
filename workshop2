@@ -1,10 +1,11 @@
 <html>
 <head>Workshop2
-<script>document.write(""If I had nine hours to chop down a tree, I'd spend the first six sharpening my ax."+<br>+
--- Abraham Lincoln")</script>
 </head>
-
 <body>
-
+<p>
+<script>
+document.write("\"If I had nine hours to chop down a tree, I\'d spend the first six sharpening my ax.\"<br>-- Abraham Lincoln");
+</script>
+</p>
 </body>
 </html>
