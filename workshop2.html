@@ -7,8 +7,7 @@
         for(var i=0; i<50; i++){
           document.write("\"If I had nine hours to chop down a tree, I\'d spend the first six sharpening my ax.\"<br>-- Abraham Lincoln<br>");
         }
-        var r = confirm("Haluatko siirtyä selaimesi määrittelemälle jatkosivulle?
-                        <br>Mozilla.org:iin Firefoxilla, Microsoft.com:iin muilla.<br>Paina "k", mikäli haluat siirtyä.<br>");
+        var r = confirm("Haluatko siirtyä selaimesi määrittelemälle jatkosivulle?<br>Mozilla.org:iin Firefoxilla, Microsoft.com:iin muilla.<br>Paina "k", mikäli haluat siirtyä.<br>");
         if (r == "k") {
           if (navigator.userAgent.indexOf("Firefox") != -1 ) {
             window.location.href = "http://mozilla.org";
