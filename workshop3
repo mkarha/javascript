@@ -1,10 +1,12 @@
 <html>
 <head>Workshop 3</head>
 <body>
-<script>
+  <script>
+    <button onclick="alert('Click')">Click me</button>
 
 
 
-</script>
+
+  </script>
 /body>
 /html>
