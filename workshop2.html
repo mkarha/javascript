@@ -4,9 +4,9 @@
   <body>
     <p>
       <script>
-        for(var i=0; i<50; i++){
-          document.write("\"If I had nine hours to chop down a tree, I\'d spend the first six sharpening my ax.\"<br>-- Abraham Lincoln<br>");
-        }
+        
+        repeatingText();
+        
         var r = false;
         r = confirm("Haluatko teleportin?");
         if (r == true) {
@@ -17,6 +17,12 @@
           }
         }else{
           alert("Ei sitten. Omapa on päätöksesi.");
+        }
+        
+        function repeatingText(){
+          for(var i=0; i<50; i++){
+              document.write("\"If I had nine hours to chop down a tree, I\'d spend the first six sharpening my ax.\"<br>-- Abraham Lincoln<br>");
+          }
         }
       </script>
     </p>
