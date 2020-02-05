@@ -4,23 +4,7 @@
   <p>
     <button type="button" onclick="alert('You clicked me!' + getDate())">Click Me!</button>
     <button type="button" onclick="addImg()">Hello!</button>
-    <button type="button" onclick="<table>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-        </table>">Table</button>
+    <button type="button" onclick="drawTable">Table</button>
     <button type="button" onclick="alert('You clicked me!')">Click Me!</button>
   </p>
   <p>
@@ -31,7 +15,30 @@
         document.body.appendChild(kuva);  
       }
       
-
+ 
+      function drawTable() {
+        var body = document.getElementsByTagName('body')[0];
+        var tbl = document.createElement('table');
+        tbl.style.width = '100%';
+        tbl.setAttribute('border', '1');
+        var tbdy = document.createElement('tbody');
+        for (var i = 0; i < 3; i++) {
+          var tr = document.createElement('tr');
+          for (var j = 0; j < 2; j++) {
+            if (i == 2 && j == 1) {
+              break
+            } else {
+              var td = document.createElement('td');
+              td.appendChild(document.createTextNode('\u0020'))
+              i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
+              tr.appendChild(td)
+            }
+          }
+          tbdy.appendChild(tr);
+        }
+        tbl.appendChild(tbdy);
+        body.appendChild(tbl)
+      }
       
 
 
