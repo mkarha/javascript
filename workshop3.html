@@ -3,7 +3,7 @@
 <body>
   <p>
     <button type="button" onclick="pvm()">Click Me!</button>
-    <button type="button" onclick="createTable()">Create table from array</button>
+    <button type="button" onclick="printTable()">Create table from array</button>
     <button type="button" onclick="addImg()">Hello!</button>
     <button type="button" onclick="document.write(html)">Table</button>
     
@@ -18,43 +18,27 @@
       ];
       
       
-      function createTable(){
-	var table = document.createElement('table');
-	table.setAttribute('empTable');
+      function printTable(){
+	      var k=0;
+	      <table>
+		      <tr>
+		      	<th>Name</th>
+	      		<th>Address</th>
+	      		<th>Country</th>
+		      </tr>
+		      for(var i=0; i<3; i++){
+			      <tr>
+				      for(int j=0; j<2; j++){
+					      <td>persons[k]</td>
+					      k++;
+				      }
+			      </tr>
+		      }
+	      
 		      
-        var tr = table.insertRow(-1);
-
-        for (var c = 0; c <= persons.length - 1; c++) {
-          tr = table.insertRow(-1);
-
-          for (var j = 0; j < 2; j++) {
-            var td = document.createElement('td');          // TABLE DEFINITION.
-            td = tr.insertCell(-1);
-            td.innerHTML = persons[c][j];                  // ADD VALUES TO EACH CELL.
-          }
+		</table>
       }
-
-        var empTable = document.getElementById('empTable');
-
-        // CREATE A DIV WHERE WE'LL SHOW THE TABLE WITH DATA.
-        var div = document.createElement('div');
-        div.innerHTML = "";
-        div.innerHTML = '<br />';
-
-        // TRAVERSE THROUGH THE TABLE TO XTRACT CELL VALUES.
-        for (var r = 1; r <= empTable.rows.length - 1; r++) {        // EACH ROW IN THE TABLE.
-          // EACH CELL IN A ROW.
-          for (c = 0; c <= empTable.rows[r].cells.length - 1; c++) {      
-
-            // ADD DATA TO THE DIV.
-            div.innerHTML = div.innerHTML + ' ' +
-               empTable.rows[r].cells[c].innerHTML;
-
-          }
-          div.innerHTML = div.innerHTML + '<br />';
-        }
-        document.body.appendChild(div);     // APPEND (ADD) THE CONTAINER TO THE BODY.
-      }
+	
 
       function addImg(){
         var kuva = document.createElement("img");
