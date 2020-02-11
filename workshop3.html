@@ -62,16 +62,51 @@
           </tr>
         </table>`;
 	    
-	    var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
+	    function showTable(){
+          var arrHead = new Array();
+          arrHead = ['Name', 'Address', 'Country'];
+
+          var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
 	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
 	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
 	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
-        ];
+         ];
+         var table = document.createElement('table'); 
+         var tr = table.insertRow(-1);
 
+          for (var h = 0; h < arrHead.length; h++) {
+            var th = document.createElement('th');              // TABLE HEADER.
+            th.innerHTML = arrHead[h];
+            tr.appendChild(th);
+          }
 
+          for (var c = 0; c <= arrValue.length - 1; c++) {
+            tr = table.insertRow(-1);
 
-          
-	    
+            for (var j = 0; j < arrHead.length; j++) {
+              var td = document.createElement('td');          // TABLE DEFINITION.
+              td = tr.insertCell(-1);
+              td.innerHTML = arrValue[c][j];                  // ADD VALUES TO EACH CELL.
+            }
+          }
+
+          var div = document.createElement('div');
+          div.innerHTML = "";
+          div.innerHTML = '<br />';
+
+          for (var r = 1; r <= empTable.rows.length - 1; r++) {        // EACH ROW IN THE TABLE.
+            // EACH CELL IN A ROW.
+            for (c = 0; c <= empTable.rows[r].cells.length - 1; c++) {      
+
+              // ADD DATA TO THE DIV.
+              div.innerHTML = div.innerHTML + ' ' +
+              empTable.rows[r].cells[c].innerHTML;
+
+            }
+            div.innerHTML = div.innerHTML + '<br />';
+          }
+          document.body.appendChild(div);     // APPEND (ADD) THE CONTAINER TO THE BODY.
+        }
     </script>
   </p>
 </body>
